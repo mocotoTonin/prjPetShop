@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petshop - Home</title>
+    <!-- Link para Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+        line-height: 1.6;
+        background-image: url(https://lebrii.com.br/wp-content/uploads/elementor/thumbs/DesenhoPet_Banner_Principal-of7zu9g9ckt7edyowlswinkb9tlvqxb9lzd632pk3k.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      header {
+        background-color: #e0812d;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 4px solid #000000;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .logo-container img {
+        width: 80px;
+        height: auto;
+      }
+
+      .logo-container h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #000000;
+      }
+
+      .icon-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        width: 30px;
+        height: 3px;
+        background: #000000;
+        margin: 5px 0;
+      }
+
+      nav {
+        display: flex;
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 1rem;
+        color: #000000;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border: 2px solid transparent;
+        border-radius: 25px;
+        transition: all 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #000000;
+        color: #fff;
+        border-color: #000000;
+      }
+
+      /* Estilos do menu móvel */
+      nav.mobile {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #ff9800;
+        width: 100%;
+        padding: 1rem 0;
+        border-top: 4px solid #000000;
+      }
+
+      nav.mobile a {
+        margin: 0.5rem 0;
+        text-align: center;
+      }
+
+      .menu-open nav.mobile {
+        display: flex;
+      }
+
+      main {
+        padding: 5rem;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .section1 {
+        margin-bottom: 5rem;
+        background: rgba(255, 255, 255, 0.3);
+        padding: 70px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section2{
+        margin-bottom: 5rem;
+        background: rgba(255, 255, 255, 0.3);
+        padding: 70px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+
+      section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #000000;
+      }
+
+      section p,
+      section ul {
+        font-size: 1.2rem;
+      }
+
+      footer {
+        background-color: #e0812d;
+        color: #000000;
+        text-align: center;
+        padding: 1rem 0;
+        border-top: 4px solid #000000;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          display: none;
+        }
+
+        .menu-toggle {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="https://thumbs.dreamstime.com/b/desenho-animado-de-mascote-cachorro-em-fundo-laranja-c%C3%A3ozinhos-encarados-com-orelhas-grandes-e-patas-as-combina%C3%A7%C3%B5es-din%C3%A2micas-280699753.jpg"
+          alt="Logo do Petshop"
+        />
+        <h1>Bem-vindo ao Petshop!</h1>
+      </div>
+      <div class="icon-container">
+        <i class="fas fa-bars" onclick="toggleMenu()" title="Menu"></i>
+        <i class="fas fa-search" title="Pesquisar"></i>
+        <i class="fas fa-cog" title="Configurações"></i>
+      </div>
+      <nav>
+        <a href="/login.html">Login</a>
+        <a href="./singup.html">Cadastre-se</a>
+        <a href="./pet-register.html">Registrar Pet</a>
+        <a href="./service-registration.html">Serviços</a>
+        <a href="./service-scheduling.html">Agendamento</a>
+      </nav>
+      <nav class="mobile">
+        <a href="/login.html">Login</a>
+        <a href="./singup.html">Cadastre-se</a>
+        <a href="./pet-register.html">Registrar Pet</a>
+        <a href="./service-registration.html">Serviços</a>
+        <a href="./service-scheduling.html">Agendamento</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section1">
+        <h2>Sobre Nós</h2>
+        <p>
+          Oferecemos os melhores cuidados para seu pet, com amor e dedicação!
+        </p>
+      </section>
+      <section class="section2">
+        <h2>Principais Serviços</h2>
+        <ul>
+          <li>Banho e Tosa</li>
+          <li>Consulta Veterinária</li>
+          <li>Hospedagem</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Petshop - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.body.classList.toggle('menu-open');
+      }
+    </script>
+  </body>
+</html>
